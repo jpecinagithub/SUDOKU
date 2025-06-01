@@ -1,0 +1,5 @@
+{
+  "name": "Sudoku Master",
+  "description": "A classic Sudoku game built with React and Tailwind CSS. Challenge yourself with different difficulty levels, validate your progress, and get help if you're stuck.",
+  "requestFramePermissions": []
+}

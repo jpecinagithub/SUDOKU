@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sudoku Master</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      /* Additional base styles if needed */
+      .sudoku-grid {
+        display: grid;
+        grid-template-columns: repeat(9, minmax(0, 1fr));
+        grid-template-rows: repeat(9, minmax(0, 1fr));
+        border: 2px solid #374151; /* gray-700 */
+        width: min(90vw, 90vh, 500px); /* Responsive size */
+        height: min(90vw, 90vh, 500px);
+        aspect-ratio: 1 / 1;
+      }
+      .sudoku-cell {
+        border: 1px solid #d1d5db; /* gray-300 */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: clamp(1rem, 4vmin, 1.75rem); /* Responsive font size */
+        cursor: pointer;
+        transition: background-color 0.2s;
+      }
+      .sudoku-cell.subgrid-border-right {
+        border-right: 2px solid #374151; /* gray-700 */
+      }
+      .sudoku-cell.subgrid-border-bottom {
+        border-bottom: 2px solid #374151; /* gray-700 */
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-slate-900 text-slate-100 flex items-center justify-center min-h-screen p-4">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
